@@ -3,10 +3,13 @@ import 'package:zoonsk/ZooInfo/ListAnimals/mlekoplist/listInfor/listinfor.dart';
 
 import 'package:flutter/material.dart';
 
-class mammals extends StatelessWidget {
-  const mammals({super.key});
+import 'package:zoonsk/repoaitories/modelanimals/animals_model.dart';
 
-  @override
+class mammals extends StatelessWidget {
+  mammals({Key? key, required this.mlek}) : super(key: key);
+
+  final Animalsname mlek;
+
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
@@ -14,21 +17,21 @@ class mammals extends StatelessWidget {
         children: [
           InkWell(
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => listinfor()));
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const listinfor()));
             },
             child: Container(
               height: 91,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Color.fromARGB(255, 245, 245, 245),
+                color: const Color.fromARGB(255, 245, 245, 245),
               ),
               child: Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.fromLTRB(3, 3, 0, 3),
-                    child: Container(
+                    child: SizedBox(
                         height: 85,
                         width: 92,
                         child: Image(image: appimages.Rectangle4)),
@@ -36,20 +39,20 @@ class mammals extends StatelessWidget {
                   SizedBox(
                     width: 22,
                   ),
-                  Container(
+                  SizedBox(
                     width: 165,
                     height: 91,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
+                        SizedBox(
                           width: 165,
                           height: 69,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Text('Юго-восточный  ',
+                              Text(mlek.name,
                                   style: TextStyle(
                                       fontSize: 16,
                                       fontFamily: 'museo700',
@@ -62,7 +65,7 @@ class mammals extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: 165,
                           height: 22,
                           child: Text('Расстояние',
@@ -75,7 +78,7 @@ class mammals extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                         height: 24,
                         width: 24,
                         child: Image(image: appimages.arrow)),

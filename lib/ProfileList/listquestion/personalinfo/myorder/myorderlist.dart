@@ -20,8 +20,8 @@ class myorderlist extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 15, left: 26),
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 15, left: 26),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -33,30 +33,30 @@ class myorderlist extends StatelessWidget {
                               color: Colors.black),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right: 21, top: 21),
+                          padding: EdgeInsets.only(right: 21, top: 21),
                           child: Text(
                             '1 x 600 р ',
                             style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'museo700',
-                                color: const Color.fromARGB(255, 220, 121, 1)),
+                                color: Color.fromARGB(255, 220, 121, 1)),
                           ),
                         )
                       ],
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(left: 26),
                   child: Text(
                     '120г - 262ккал',
                     style: TextStyle(
                         fontSize: 10,
                         fontFamily: 'museo300',
-                        color: const Color.fromARGB(255, 151, 147, 147)),
+                        color: Color.fromARGB(255, 151, 147, 147)),
                   ),
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
@@ -64,7 +64,7 @@ class myorderlist extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 10,
                           fontFamily: 'museo300',
-                          color: const Color.fromARGB(255, 151, 147, 147)),
+                          color: Color.fromARGB(255, 151, 147, 147)),
                     ),
                     Padding(
                       padding: EdgeInsets.only(
@@ -74,7 +74,7 @@ class myorderlist extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 16,
                             fontFamily: 'museo700',
-                            color: const Color.fromARGB(255, 220, 121, 1)),
+                            color: Color.fromARGB(255, 220, 121, 1)),
                       ),
                     ),
                   ],

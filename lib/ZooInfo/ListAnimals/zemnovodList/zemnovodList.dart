@@ -28,7 +28,7 @@ class _zemnovodList extends State<zemnovodList> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: const Image(image: appimages.arrowcircleleft),
                     onTap: () {
                       Navigator.pop(context);
                     },

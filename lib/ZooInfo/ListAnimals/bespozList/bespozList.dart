@@ -27,7 +27,7 @@ class _bespozList extends State<bespozList> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: const Image(image: appimages.arrowcircleleft),
                     onTap: () {
                       Navigator.pop(context);
                     },

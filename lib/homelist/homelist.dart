@@ -14,10 +14,10 @@ class _homelist extends State<homelist> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: ListView(
-        children: [
+        children: const [
           SafeArea(
             child: Padding(
-              padding: const EdgeInsets.only(top: 25, left: 10, right: 10),
+              padding: EdgeInsets.only(top: 25, left: 10, right: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -32,7 +32,7 @@ class _homelist extends State<homelist> {
                     ),
                   ),
                   SizedBox(height: 20),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 163,
                     child: Image(image: appimages.group1),
@@ -47,13 +47,13 @@ class _homelist extends State<homelist> {
                             color: Color.fromARGB(255, 41, 45, 50))),
                   ),
                   SizedBox(height: 10),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 116,
                     child: Image(image: appimages.group2),
                   ),
                   SizedBox(height: 15),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 116,
                     child: Image(image: appimages.group3),
@@ -68,13 +68,13 @@ class _homelist extends State<homelist> {
                             color: Color.fromARGB(255, 41, 45, 50))),
                   ),
                   SizedBox(height: 17),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 106,
                     child: Image(image: appimages.group4),
                   ),
                   SizedBox(height: 12),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 106,
                     child: Image(image: appimages.group5),
@@ -89,13 +89,13 @@ class _homelist extends State<homelist> {
                             color: Color.fromARGB(255, 41, 45, 50))),
                   ),
                   SizedBox(height: 21),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 106,
                     child: Image(image: appimages.group6),
                   ),
                   SizedBox(height: 12),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     height: 106,
                     child: Image(image: appimages.group7),

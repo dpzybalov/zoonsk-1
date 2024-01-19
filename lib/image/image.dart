@@ -38,4 +38,5 @@ abstract class appimages {
   static const vieline = AssetImage('assets/image/vieline.png');
   static const group6 = AssetImage('assets/image/Group6.png');
   static const group7 = AssetImage('assets/image/Group7.png');
+  static const ramka = AssetImage('assets/image/ramka.png');
 }

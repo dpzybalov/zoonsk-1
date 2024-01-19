@@ -15,7 +15,7 @@ class _questionlist extends State<questionlist> {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: ListView(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           SafeArea(
             child: Padding(
@@ -29,9 +29,9 @@ class _questionlist extends State<questionlist> {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Image(image: appimages.arrowcircleleft),
+                        child: const Image(image: appimages.arrowcircleleft),
                       ),
-                      Text(
+                      const Text(
                         'Задать вопрос',
                         style: TextStyle(
                             fontSize: 40,
@@ -40,15 +40,15 @@ class _questionlist extends State<questionlist> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   TextField(
                     decoration: InputDecoration(
                       isCollapsed: true,
-                      contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 13),
+                      contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 13),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color.fromARGB(255, 197, 198, 204),
                           width: 1,
                         ),
@@ -57,15 +57,15 @@ class _questionlist extends State<questionlist> {
                       hintText: 'Ваше имя',
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   TextField(
                     decoration: InputDecoration(
                       isCollapsed: true,
-                      contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 13),
+                      contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 13),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color.fromARGB(255, 197, 198, 204),
                           width: 1,
                         ),
@@ -74,15 +74,15 @@ class _questionlist extends State<questionlist> {
                       hintText: 'Почта для ответа',
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   TextField(
                     decoration: InputDecoration(
                       isCollapsed: true,
-                      contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 176),
+                      contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 176),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color.fromARGB(255, 197, 198, 204),
                           width: 1,
                         ),
@@ -91,7 +91,7 @@ class _questionlist extends State<questionlist> {
                       hintText: 'Ваш вопрос',
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   InkWell(
@@ -104,7 +104,7 @@ class _questionlist extends State<questionlist> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: const Color.fromARGB(255, 1, 98, 63)),
-                          child: Text(
+                          child: const Text(
                             'Спросить',
                             style: TextStyle(
                                 fontFamily: 'museo700',

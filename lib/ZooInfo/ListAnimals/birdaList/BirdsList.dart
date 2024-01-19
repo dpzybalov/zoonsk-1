@@ -26,7 +26,7 @@ class _BirdsList extends State<BirdsList> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: const Image(image: appimages.arrowcircleleft),
                     onTap: () {
                       Navigator.pop(context);
                     },

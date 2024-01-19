@@ -41,7 +41,7 @@ class Animals extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Quest()));
+                  .push(MaterialPageRoute(builder: (context) => const Quest()));
             },
           ),
           const Positioned(top: 22, left: 274, child: Text('10')),

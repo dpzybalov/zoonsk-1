@@ -18,7 +18,7 @@ class _Personaldata extends State<Personaldata> {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: ListView(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           SafeArea(
             child: Padding(
@@ -32,9 +32,9 @@ class _Personaldata extends State<Personaldata> {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Image(image: appimages.arrowcircleleft),
+                        child: const Image(image: appimages.arrowcircleleft),
                       ),
-                      Text(
+                      const Text(
                         'Личные данные',
                         style: TextStyle(
                             fontSize: 40,
@@ -43,14 +43,14 @@ class _Personaldata extends State<Personaldata> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 53,
                   ),
                   Container(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Row(children: [
+                        const Row(children: [
                           Text(
                             'Имя',
                             style: TextStyle(
@@ -59,15 +59,15 @@ class _Personaldata extends State<Personaldata> {
                             ),
                           ),
                         ]),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         TextField(
                           decoration: InputDecoration(
                             isCollapsed: true,
-                            contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 13),
+                            contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 13),
                             border: OutlineInputBorder(
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Color.fromARGB(255, 197, 198, 204),
                                 width: 1,
                               ),
@@ -79,14 +79,14 @@ class _Personaldata extends State<Personaldata> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Container(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Row(children: [
+                        const Row(children: [
                           Text(
                             'Номер телефона',
                             style: TextStyle(
@@ -95,15 +95,15 @@ class _Personaldata extends State<Personaldata> {
                             ),
                           ),
                         ]),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         TextField(
                           decoration: InputDecoration(
                             isCollapsed: true,
-                            contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 13),
+                            contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 13),
                             border: OutlineInputBorder(
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Color.fromARGB(255, 197, 198, 204),
                                 width: 1,
                               ),
@@ -115,14 +115,14 @@ class _Personaldata extends State<Personaldata> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Container(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Row(children: [
+                        const Row(children: [
                           Text(
                             'Эл.почта',
                             style: TextStyle(
@@ -131,15 +131,15 @@ class _Personaldata extends State<Personaldata> {
                             ),
                           ),
                         ]),
-                        SizedBox(
+                        const SizedBox(
                           height: 8,
                         ),
                         TextField(
                           decoration: InputDecoration(
                             isCollapsed: true,
-                            contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 13),
+                            contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 13),
                             border: OutlineInputBorder(
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Color.fromARGB(255, 197, 198, 204),
                                 width: 1,
                               ),
@@ -151,7 +151,7 @@ class _Personaldata extends State<Personaldata> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   Row(
@@ -160,7 +160,7 @@ class _Personaldata extends State<Personaldata> {
                       InkWell(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => myorder()));
+                              builder: (context) => const myorder()));
                         },
                         child: Container(
                             width: MediaQuery.of(context).size.width / 2.15,
@@ -169,8 +169,8 @@ class _Personaldata extends State<Personaldata> {
                                 borderRadius: BorderRadius.circular(20),
                                 color:
                                     const Color.fromARGB(255, 240, 240, 240)),
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(19, 0, 14, 16),
+                            child: const Padding(
+                              padding: EdgeInsets.fromLTRB(19, 0, 14, 16),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -181,10 +181,10 @@ class _Personaldata extends State<Personaldata> {
                                     style: TextStyle(
                                         fontFamily: 'museo700',
                                         fontSize: 16,
-                                        color: const Color.fromARGB(
+                                        color: Color.fromARGB(
                                             255, 52, 32, 31)),
                                   ),
-                                  Container(
+                                  SizedBox(
                                       height: 24,
                                       width: 24,
                                       child: Image(image: appimages.arrowright))
@@ -195,7 +195,7 @@ class _Personaldata extends State<Personaldata> {
                       InkWell(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => myticket()));
+                              builder: (context) => const myticket()));
                         },
                         child: Container(
                             width: MediaQuery.of(context).size.width / 2.15,
@@ -204,8 +204,8 @@ class _Personaldata extends State<Personaldata> {
                                 borderRadius: BorderRadius.circular(20),
                                 color:
                                     const Color.fromARGB(255, 240, 240, 240)),
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(19, 0, 14, 16),
+                            child: const Padding(
+                              padding: EdgeInsets.fromLTRB(19, 0, 14, 16),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -216,10 +216,10 @@ class _Personaldata extends State<Personaldata> {
                                     style: TextStyle(
                                         fontFamily: 'museo700',
                                         fontSize: 16,
-                                        color: const Color.fromARGB(
+                                        color: Color.fromARGB(
                                             255, 52, 32, 31)),
                                   ),
-                                  Container(
+                                  SizedBox(
                                       height: 24,
                                       width: 24,
                                       child: Image(image: appimages.arrowright))
@@ -229,7 +229,7 @@ class _Personaldata extends State<Personaldata> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 26,
                   ),
                   InkWell(
@@ -242,7 +242,7 @@ class _Personaldata extends State<Personaldata> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               color: const Color.fromARGB(255, 1, 98, 63)),
-                          child: Text(
+                          child: const Text(
                             'Сохранить',
                             style: TextStyle(
                                 fontFamily: 'museo700',

@@ -5,7 +5,7 @@ import 'package:zoonsk/navigationBar/main_screen.dart';
 
 final route = {
   '/': (context) => const MainScreen(),
-  '/Zooinfolist': (context) => const ZooinfoList(),
+  '/Zooinfolist': (context) => ZooinfoList(),
   '/ListAnimals': (context) => const ListAnimals(),
   '/listinfor': (context) => const listinfor(),
 };

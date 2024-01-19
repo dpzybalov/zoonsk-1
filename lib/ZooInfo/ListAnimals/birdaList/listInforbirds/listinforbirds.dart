@@ -11,8 +11,8 @@ class listinforBirds extends StatefulWidget {
 
 final player = AudioPlayer();
 bool isPlaying = false;
-Duration duration = new Duration();
-Duration position = new Duration();
+Duration duration = const Duration();
+Duration position = const Duration();
 
 String formatTime(int seconds) {
   return '${(Duration(seconds: seconds))}'.split('.')[0].padLeft(8, '0');
@@ -62,7 +62,8 @@ class _listinforBirds extends State<listinforBirds> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
-                            child: Image(image: appimages.arrowcircleleft),
+                            child:
+                                const Image(image: appimages.arrowcircleleft),
                             onTap: () {
                               Navigator.pop(context);
                             },
@@ -113,21 +114,21 @@ class _listinforBirds extends State<listinforBirds> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 'Параметр 1',
                                 style: TextStyle(
                                     fontSize: 10,
                                     fontFamily: 'museo700',
                                     color: Color.fromARGB(255, 0, 0, 0)),
                               ),
-                              Text(
+                              const Text(
                                 'Значение 1',
                                 style: TextStyle(
                                     fontSize: 14,
                                     fontFamily: 'museo700',
                                     color: Color.fromARGB(255, 219, 128, 10)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 7,
                               ),
                               Container(
@@ -147,21 +148,21 @@ class _listinforBirds extends State<listinforBirds> {
                           Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   'Параметр 2',
                                   style: TextStyle(
                                       fontSize: 10,
                                       fontFamily: 'museo700',
                                       color: Color.fromARGB(255, 0, 0, 0)),
                                 ),
-                                Text(
+                                const Text(
                                   'Значение 2',
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontFamily: 'museo700',
                                       color: Color.fromARGB(255, 219, 128, 10)),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 7,
                                 ),
                                 Container(
@@ -180,21 +181,21 @@ class _listinforBirds extends State<listinforBirds> {
                           Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   'Параметр 3',
                                   style: TextStyle(
                                       fontSize: 10,
                                       fontFamily: 'museo700',
                                       color: Color.fromARGB(255, 0, 0, 0)),
                                 ),
-                                Text(
+                                const Text(
                                   'Значение 3',
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontFamily: 'museo700',
                                       color: Color.fromARGB(255, 219, 128, 10)),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 7,
                                 ),
                                 Container(
@@ -208,7 +209,7 @@ class _listinforBirds extends State<listinforBirds> {
                       const SizedBox(
                         height: 7,
                       ),
-                      Row(
+                      const Row(
                         children: [
                           Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -240,7 +241,7 @@ class _listinforBirds extends State<listinforBirds> {
                                 borderRadius: BorderRadius.circular(20),
                                 color: const Color.fromRGBO(255, 179, 87, 1)),
                             child: Padding(
-                              padding: EdgeInsets.fromLTRB(15, 51, 15, 0),
+                              padding: const EdgeInsets.fromLTRB(15, 51, 15, 0),
                               child: Column(
                                 children: [
                                   Row(
@@ -250,7 +251,8 @@ class _listinforBirds extends State<listinforBirds> {
                                           top: 13,
                                         ),
                                         child: Container(
-                                          padding: EdgeInsets.only(left: 2),
+                                          padding:
+                                              const EdgeInsets.only(left: 2),
                                           width: MediaQuery.of(context)
                                                   .size
                                                   .width /
@@ -279,7 +281,7 @@ class _listinforBirds extends State<listinforBirds> {
                                                         255, 255, 255, 255),
                                                 trackHeight: 7,
                                                 thumbShape:
-                                                    RoundSliderThumbShape(
+                                                    const RoundSliderThumbShape(
                                                         enabledThumbRadius: 0),
                                               ),
                                               child: Slider(
@@ -299,7 +301,7 @@ class _listinforBirds extends State<listinforBirds> {
                                           ),
                                         ),
                                       ),
-                                      Container(
+                                      SizedBox(
                                         height: 27,
                                         width: 27,
                                         child: IconButton(
@@ -321,7 +323,8 @@ class _listinforBirds extends State<listinforBirds> {
                                     ],
                                   ),
                                   Container(
-                                    padding: EdgeInsets.fromLTRB(0, 7, 52, 0),
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 7, 52, 0),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -330,7 +333,7 @@ class _listinforBirds extends State<listinforBirds> {
                                       children: [
                                         Text(
                                           formatTime(position.inSeconds),
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             fontSize: 8,
                                             color: Colors.white,
                                             fontFamily: 'museo500',
@@ -339,7 +342,7 @@ class _listinforBirds extends State<listinforBirds> {
                                         Text(
                                           formatTime(
                                               (duration - position).inSeconds),
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             fontSize: 8,
                                             color: Colors.white,
                                             fontFamily: 'museo500',
@@ -348,7 +351,7 @@ class _listinforBirds extends State<listinforBirds> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 22,
                                   ),
                                   Row(
@@ -360,9 +363,10 @@ class _listinforBirds extends State<listinforBirds> {
                                             borderRadius:
                                                 BorderRadius.circular(10),
                                             color: Colors.white),
-                                        child: Center(child: Text('Отряд')),
+                                        child:
+                                            const Center(child: Text('Отряд')),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       Container(
@@ -372,21 +376,22 @@ class _listinforBirds extends State<listinforBirds> {
                                             borderRadius:
                                                 BorderRadius.circular(10),
                                             color: Colors.white),
-                                        child: Center(child: Text('Семейство')),
+                                        child: const Center(
+                                            child: Text('Семейство')),
                                       ),
                                     ],
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 15,
                                   ),
-                                  Text(
+                                  const Text(
                                       'Жирафы — самые высокие наземные животные. Жираф мог заглянуть в окно второго этажа, даже не вставая на цыпочки.'),
                                   Container(
                                     width: 317,
                                     height: 1,
                                     color: Colors.black12,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 16,
                                   ),
                                   Row(
@@ -395,11 +400,11 @@ class _listinforBirds extends State<listinforBirds> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Container(
+                                      SizedBox(
                                         width:
                                             MediaQuery.of(context).size.width /
                                                 2.2,
-                                        child: Column(
+                                        child: const Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
@@ -424,11 +429,12 @@ class _listinforBirds extends State<listinforBirds> {
                                         ),
                                       ),
                                       Container(
-                                        child: Image(image: appimages.afr),
+                                        child:
+                                            const Image(image: appimages.afr),
                                       ),
                                     ],
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
                                   Container(
@@ -436,17 +442,17 @@ class _listinforBirds extends State<listinforBirds> {
                                     height: 1,
                                     color: Colors.black12,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Text(
+                                  const Text(
                                     'Жирафы — самые высокие наземные животные. Жираф мог заглянуть в окно второго этажа, даже не вставая на цыпочки.Жирафы — самые высокие наземные животные. Жираф мог заглянуть в окно второго этажа, даже не вставая на цыпочки.Жирафы — самые высокие наземные животные. Жираф мог заглянуть в окно второго этажа, даже не вставая на цыпочки.Жирафы — самые высокие наземные животные. Жираф мог заглянуть в окно второго этажа, даже не вставая на цыпочки.',
                                     style: TextStyle(
                                         fontSize: 16,
                                         fontFamily: 'museo300',
                                         color: Color.fromARGB(255, 0, 0, 0)),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
                                   Container(
@@ -454,10 +460,10 @@ class _listinforBirds extends State<listinforBirds> {
                                     height: 1,
                                     color: Colors.black12,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Column(
+                                  const Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: [
@@ -491,7 +497,7 @@ class _listinforBirds extends State<listinforBirds> {
                 Positioned(
                   left: MediaQuery.of(context).size.width / 4,
                   top: MediaQuery.of(context).size.height / 7,
-                  child: Container(
+                  child: const SizedBox(
                       height: 350,
                       width: 260,
                       child: Image(image: appimages.redibis)),
@@ -503,14 +509,22 @@ class _listinforBirds extends State<listinforBirds> {
                     child: Row(
                       children: [
                         InkWell(
-                            onTap: () {}, child: Image(image: appimages.audio)),
-                        SizedBox(
+                            onTap: () {},
+                            child: Container(
+                                width: 64,
+                                height: 64,
+                                child: const Image(image: appimages.audio))),
+                        const SizedBox(
                           width: 12,
                         ),
                         InkWell(
                           onTap: () {},
-                          child: Image(
-                            image: appimages.AR,
+                          child: Container(
+                            height: 64,
+                            width: 64,
+                            child: const Image(
+                              image: appimages.AR,
+                            ),
                           ),
                         ),
                       ],

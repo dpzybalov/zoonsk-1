@@ -26,7 +26,7 @@ class _profile extends State<profile> {
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => foodlist()));
+                      MaterialPageRoute(builder: (context) => const foodlist()));
                 },
                 child: Container(
                   height: 97,
@@ -38,9 +38,9 @@ class _profile extends State<profile> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(19, 0, 0, 16),
+                        padding: const EdgeInsets.fromLTRB(19, 0, 0, 16),
                         alignment: Alignment.bottomLeft,
-                        child: Text(
+                        child: const Text(
                           'Заказать еду',
                           style: TextStyle(
                               fontSize: 16,
@@ -48,9 +48,9 @@ class _profile extends State<profile> {
                               color: Colors.white),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 14, 0),
-                        child: Container(
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(0, 0, 14, 0),
+                        child: SizedBox(
                           height: 60,
                           width: 55,
                           child: Image(
@@ -62,13 +62,13 @@ class _profile extends State<profile> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 11,
               ),
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => QuestList()));
+                      MaterialPageRoute(builder: (context) => const QuestList()));
                 },
                 child: Container(
                   height: 97,
@@ -80,19 +80,19 @@ class _profile extends State<profile> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(19, 0, 0, 16),
+                        padding: const EdgeInsets.fromLTRB(19, 0, 0, 16),
                         alignment: Alignment.bottomLeft,
-                        child: Text(
+                        child: const Text(
                           'Прогресс изучения',
                           style: TextStyle(
                               fontSize: 16,
                               fontFamily: 'museo700',
-                              color: const Color.fromARGB(255, 52, 32, 31)),
+                              color: Color.fromARGB(255, 52, 32, 31)),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 14, 0),
-                        child: Container(
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(0, 0, 14, 0),
+                        child: SizedBox(
                           height: 60,
                           width: 55,
                           child: Image(
@@ -104,13 +104,13 @@ class _profile extends State<profile> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 11,
               ),
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => ticketlist()));
+                      MaterialPageRoute(builder: (context) => const ticketlist()));
                 },
                 child: Container(
                   height: 97,
@@ -122,9 +122,9 @@ class _profile extends State<profile> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(19, 0, 0, 16),
+                        padding: const EdgeInsets.fromLTRB(19, 0, 0, 16),
                         alignment: Alignment.bottomLeft,
-                        child: Text(
+                        child: const Text(
                           'Купить билет',
                           style: TextStyle(
                               fontSize: 16,
@@ -132,9 +132,9 @@ class _profile extends State<profile> {
                               color: Color.fromARGB(255, 52, 32, 31)),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 0, 14, 0),
-                        child: Container(
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(0, 0, 14, 0),
+                        child: SizedBox(
                           height: 60,
                           width: 55,
                           child: Image(
@@ -146,7 +146,7 @@ class _profile extends State<profile> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 11,
               ),
               Row(
@@ -155,7 +155,7 @@ class _profile extends State<profile> {
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Personaldata()));
+                          builder: (context) => const Personaldata()));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width / 2.16,
@@ -163,17 +163,17 @@ class _profile extends State<profile> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: const Color.fromARGB(255, 240, 240, 240)),
-                      child: Column(children: [
+                      child: const Column(children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(115, 16, 16, 0),
-                          child: Container(
+                          padding: EdgeInsets.fromLTRB(115, 16, 16, 0),
+                          child: SizedBox(
                             height: 42,
                             width: 42,
                             child: Image(image: appimages.iconfontuser),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(13, 77, 0, 0),
+                          padding: EdgeInsets.fromLTRB(13, 77, 0, 0),
                           child: Text(
                             'Личный кабинет',
                             style: TextStyle(
@@ -188,7 +188,7 @@ class _profile extends State<profile> {
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => questionlist()));
+                          builder: (context) => const questionlist()));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width / 2.16,
@@ -196,17 +196,17 @@ class _profile extends State<profile> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: const Color.fromARGB(255, 240, 240, 240)),
-                      child: Column(children: [
+                      child: const Column(children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(115, 16, 16, 0),
-                          child: Container(
+                          padding: EdgeInsets.fromLTRB(115, 16, 16, 0),
+                          child: SizedBox(
                             height: 42,
                             width: 42,
                             child: Image(image: appimages.comments),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(13, 77, 0, 0),
+                          padding: EdgeInsets.fromLTRB(13, 77, 0, 0),
                           child: Text(
                             'Задать вопрос',
                             style: TextStyle(

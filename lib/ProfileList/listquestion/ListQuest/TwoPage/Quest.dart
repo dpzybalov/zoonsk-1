@@ -29,11 +29,11 @@ class _Quest extends State<Quest> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: const Image(image: appimages.arrowcircleleft),
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image(
@@ -41,7 +41,7 @@ class _Quest extends State<Quest> {
                   ),
                 ],
               ),
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -94,7 +94,7 @@ class _Quest extends State<Quest> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Center(
                     child: Stack(
                       children: [
@@ -157,7 +157,7 @@ class _Quest extends State<Quest> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 71,
               ),
               Center(

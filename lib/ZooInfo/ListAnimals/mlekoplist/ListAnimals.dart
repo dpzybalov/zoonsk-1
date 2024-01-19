@@ -1,4 +1,6 @@
 import 'package:zoonsk/ZooInfo/ListAnimals/mlekoplist/schedule.dart';
+import 'package:zoonsk/ZooInfo/ListZooInfo/ZooInfolist.dart';
+
 import 'package:zoonsk/image/image.dart';
 import 'package:flutter/material.dart';
 
@@ -10,8 +12,6 @@ class ListAnimals extends StatefulWidget {
 }
 
 class _AnimalList extends State<ListAnimals> {
-
-   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,14 @@ class _AnimalList extends State<ListAnimals> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: SizedBox(
+                      height: 40,
+                      width: 40,
+                      child: Container(
+                          width: 36,
+                          height: 36,
+                          child: const Image(image: appimages.arrowcircleleft)),
+                    ),
                     onTap: () {
                       Navigator.pop(context);
                     },
@@ -45,9 +52,11 @@ class _AnimalList extends State<ListAnimals> {
               ),
               Expanded(
                   child: ListView.builder(
-                itemCount: 9,
+                itemCount: animalsnameList!.length,
                 itemBuilder: ((context, index) {
-                  return const mammals();
+                  final mlek = animalsnameList![index];
+
+                  return mammals(mlek: mlek);
                 }),
               ))
             ],

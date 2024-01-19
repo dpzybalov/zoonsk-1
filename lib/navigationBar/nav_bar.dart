@@ -1,7 +1,7 @@
 // import 'dart:io';
 
 import 'package:zoonsk/ZooIcons/zoo_icons.dart';
-import 'package:zoonsk/navigationBar/QrScan/qesc.dart';
+// import 'package:zoonsk/navigationBar/QrScan/qesc.dart';
 
 import 'package:flutter/material.dart';
 
@@ -25,13 +25,13 @@ class NavBar extends StatelessWidget {
           BottomAppBar(
             elevation: 0.0,
             child: ClipRRect(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30.0),
                 topRight: Radius.circular(30.0),
               ),
               child: Container(
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 245, 245, 245),
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 245, 245, 245),
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(30),
                       topLeft: Radius.circular(30)),
@@ -48,46 +48,48 @@ class NavBar extends StatelessWidget {
                       pageIndex == 1,
                       onTap: () => onTap(1),
                     ),
-                    SizedBox(
-                      width: 64,
-                    ),
                     navItem(
-                      ZooIcons.map,
+                      Icons.camera_alt,
                       pageIndex == 2,
                       onTap: () => onTap(2),
                     ),
                     navItem(
-                      ZooIcons.profile,
+                      ZooIcons.map,
                       pageIndex == 3,
                       onTap: () => onTap(3),
+                    ),
+                    navItem(
+                      ZooIcons.profile,
+                      pageIndex == 4,
+                      onTap: () => onTap(4),
                     ),
                   ],
                 ),
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).size.height / 130,
-                left: MediaQuery.of(context).size.width / 2.4),
-            child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
-                    color: Color.fromRGBO(1, 98, 63, 1)),
-                height: 64,
-                width: 64,
-                child: InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
-                  },
-                  // onTap: () => debugPrint("Add Button pressed"),
-                  child: Icon(
-                    Icons.camera_alt,
-                    color: Colors.white,
-                  ),
-                )),
-          ),
+          // Padding(
+          //   padding: EdgeInsets.only(
+          //       bottom: MediaQuery.of(context).size.height / 130,
+          //       left: MediaQuery.of(context).size.width / 2.4),
+          //   child: Container(
+          //       decoration: BoxDecoration(
+          //           borderRadius: BorderRadius.circular(40),
+          //           color: const Color.fromRGBO(1, 98, 63, 1)),
+          //       height: 64,
+          //       width: 64,
+          //       child: InkWell(
+          //         onTap: () {
+          //           Navigator.of(context).push(MaterialPageRoute(
+          //               builder: (context) => const HomeScreen()));
+          //         },
+          //         // onTap: () => debugPrint("Add Button pressed"),
+          //         child: const Icon(
+          //           Icons.camera_alt,
+          //           color: Colors.white,
+          //         ),
+          //       )),
+          // ),
         ]);
   }
 
@@ -98,8 +100,8 @@ class NavBar extends StatelessWidget {
         child: Icon(
           icon,
           color: selected
-              ? Color.fromRGBO(1, 98, 63, 1)
-              : Color.fromRGBO(1, 98, 63, 1).withOpacity(0.4),
+              ? const Color.fromRGBO(1, 98, 63, 1)
+              : const Color.fromRGBO(1, 98, 63, 1).withOpacity(0.4),
         ),
       ),
     );

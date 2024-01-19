@@ -42,9 +42,9 @@ class _ticketlist extends State<ticketlist>
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: const Image(image: appimages.arrowcircleleft),
                   ),
-                  Text(
+                  const Text(
                     'Билеты',
                     style: TextStyle(
                         fontSize: 40,
@@ -53,27 +53,27 @@ class _ticketlist extends State<ticketlist>
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6,
               ),
               DefaultTabController(
                 length: 3,
                 child: TabBar(
-                    labelPadding: EdgeInsets.only(left: 7, right: 7),
+                    labelPadding: const EdgeInsets.only(left: 7, right: 7),
                     tabAlignment: TabAlignment.fill,
-                    indicatorPadding: EdgeInsets.fromLTRB(0, 8, 0, 8),
+                    indicatorPadding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
                     dividerColor: Colors.white,
                     indicatorSize: TabBarIndicatorSize.tab,
                     indicator: BoxDecoration(
                         color: const Color.fromARGB(255, 1, 98, 63),
                         borderRadius: BorderRadius.circular(20)),
                     labelColor: Colors.white,
-                    labelStyle: TextStyle(fontSize: 12, fontFamily: 'museo300'),
+                    labelStyle: const TextStyle(fontSize: 12, fontFamily: 'museo300'),
                     unselectedLabelStyle:
-                        TextStyle(fontSize: 12, fontFamily: 'museo300'),
+                        const TextStyle(fontSize: 12, fontFamily: 'museo300'),
                     controller: _tabController,
                     unselectedLabelColor: const Color.fromARGB(255, 72, 72, 72),
-                    tabs: [
+                    tabs: const [
                       Tab(
                         text: 'Билеты на день',
                       ),
@@ -87,8 +87,8 @@ class _ticketlist extends State<ticketlist>
               ),
               Expanded(
                   child: TabBarView(controller: _tabController, children: [
-                daylyTicket(),
-                Text('home2'),
+                const daylyTicket(),
+                const Text('home2'),
                 ListView.builder(
                   itemCount: 15,
                   itemBuilder: ((context, index) {

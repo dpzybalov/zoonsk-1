@@ -2,6 +2,8 @@ import 'package:zoonsk/ProfileList/profilelist.dart';
 import 'package:zoonsk/ZooInfo/ListZooInfo/ZooInfolist.dart';
 import 'package:zoonsk/homelist/homelist.dart';
 
+import 'package:zoonsk/navigationBar/QrScan/qrscan.dart';
+
 import 'package:zoonsk/navigationBar/nav_model.dart';
 
 import 'nav_bar.dart';
@@ -18,6 +20,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final homeNavKey = GlobalKey<NavigatorState>();
   final animalslist = GlobalKey<NavigatorState>();
+  final qr = GlobalKey<NavigatorState>();
   final maplist = GlobalKey<NavigatorState>();
   final profileNavKey = GlobalKey<NavigatorState>();
   int selectedTab = 0;
@@ -33,8 +36,12 @@ class _MainScreenState extends State<MainScreen> {
         navKey: homeNavKey,
       ),
       NavModel(
-        page: const ZooinfoList(),
+        page: ZooinfoList(),
         navKey: animalslist,
+      ),
+      NavModel(
+        page: QrCodeScanner(),
+        navKey: qr,
       ),
       NavModel(
         page: const profile(),

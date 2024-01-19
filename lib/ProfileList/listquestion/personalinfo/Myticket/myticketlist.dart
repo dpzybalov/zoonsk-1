@@ -16,22 +16,22 @@ class myticketlist extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               color: const Color.fromARGB(255, 245, 245, 245),
             ),
-            child: Column(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 12, left: 19),
+                  padding: EdgeInsets.only(top: 12, left: 19),
                   child: Text(
                     'Ваш заказ:',
                     style: TextStyle(
                         fontSize: 12,
                         fontFamily: 'museo300',
-                        color: const Color.fromARGB(255, 72, 72, 72)),
+                        color: Color.fromARGB(255, 72, 72, 72)),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 2, left: 22),
+                  padding: EdgeInsets.only(top: 2, left: 22),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -43,13 +43,13 @@ class myticketlist extends StatelessWidget {
                             color: Colors.black),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(right: 19),
+                        padding: EdgeInsets.only(right: 19),
                         child: Text(
                           '600 р ',
                           style: TextStyle(
                               fontSize: 16,
                               fontFamily: 'museo700',
-                              color: const Color.fromARGB(255, 220, 121, 1)),
+                              color: Color.fromARGB(255, 220, 121, 1)),
                         ),
                       )
                     ],

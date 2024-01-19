@@ -27,9 +27,9 @@ class _myticket extends State<myticket> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: const Image(image: appimages.arrowcircleleft),
                   ),
-                  Text(
+                  const Text(
                     'Мои билеты',
                     style: TextStyle(
                         fontSize: 40,
@@ -38,7 +38,7 @@ class _myticket extends State<myticket> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 36,
               ),
               Expanded(

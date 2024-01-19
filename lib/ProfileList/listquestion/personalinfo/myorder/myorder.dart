@@ -26,9 +26,9 @@ class _myorder extends State<myorder> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: const Image(image: appimages.arrowcircleleft),
                   ),
-                  Text(
+                  const Text(
                     'Мои заказы',
                     style: TextStyle(
                         fontSize: 40,
@@ -37,7 +37,7 @@ class _myorder extends State<myorder> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 36,
               ),
               Expanded(

@@ -15,10 +15,11 @@ class _daylyTicket extends State<daylyTicket> {
   int _quantity2 = 0;
   DateTime today = DateTime.now();
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Row(
@@ -34,10 +35,10 @@ class _daylyTicket extends State<daylyTicket> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top: 12, left: 14),
+                          padding: EdgeInsets.only(top: 12, left: 14),
                           child: Text(
                             'Взрослый билет',
                             style: TextStyle(
@@ -47,25 +48,25 @@ class _daylyTicket extends State<daylyTicket> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 12, left: 10),
+                          padding: EdgeInsets.only(top: 12, left: 10),
                           child: Text(
                             '600 р ',
                             style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'museo700',
-                                color: const Color.fromARGB(255, 220, 121, 1)),
+                                color: Color.fromARGB(255, 220, 121, 1)),
                           ),
                         )
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 2, left: 14),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 2, left: 14),
                       child: Text(
                         '+12 лет',
                         style: TextStyle(
                             fontSize: 12,
                             fontFamily: 'museo300',
-                            color: const Color.fromARGB(255, 192, 192, 192)),
+                            color: Color.fromARGB(255, 192, 192, 192)),
                       ),
                     ),
                     Padding(
@@ -78,22 +79,22 @@ class _daylyTicket extends State<daylyTicket> {
                                 _quantity++;
                               });
                             },
-                            child: Container(
+                            child: const SizedBox(
                                 height: 24,
                                 width: 24,
                                 child: Image(image: appimages.searchzoomin)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           Text(
                             '$_quantity',
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'museo700',
-                                color: const Color.fromARGB(255, 1, 98, 63)),
+                                color: Color.fromARGB(255, 1, 98, 63)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           InkWell(
@@ -103,7 +104,7 @@ class _daylyTicket extends State<daylyTicket> {
                                 _quantity--;
                               });
                             },
-                            child: Container(
+                            child: const SizedBox(
                                 height: 24,
                                 width: 24,
                                 child: Image(image: appimages.searchzoomout)),
@@ -123,10 +124,10 @@ class _daylyTicket extends State<daylyTicket> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(top: 12, left: 14),
+                          padding: EdgeInsets.only(top: 12, left: 14),
                           child: Text(
                             'Детский билет',
                             style: TextStyle(
@@ -136,25 +137,25 @@ class _daylyTicket extends State<daylyTicket> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 12, left: 10),
+                          padding: EdgeInsets.only(top: 12, left: 10),
                           child: Text(
                             '600 р ',
                             style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'museo700',
-                                color: const Color.fromARGB(255, 220, 121, 1)),
+                                color: Color.fromARGB(255, 220, 121, 1)),
                           ),
                         )
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 2, left: 14),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 2, left: 14),
                       child: Text(
                         '+5 - 12 лет',
                         style: TextStyle(
                             fontSize: 12,
                             fontFamily: 'museo300',
-                            color: const Color.fromARGB(255, 192, 192, 192)),
+                            color: Color.fromARGB(255, 192, 192, 192)),
                       ),
                     ),
                     Padding(
@@ -167,22 +168,22 @@ class _daylyTicket extends State<daylyTicket> {
                                 _quantity2++;
                               });
                             },
-                            child: Container(
+                            child: const SizedBox(
                                 height: 24,
                                 width: 24,
                                 child: Image(image: appimages.searchzoomin)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           Text(
                             '$_quantity2',
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 16,
                                 fontFamily: 'museo700',
-                                color: const Color.fromARGB(255, 1, 98, 63)),
+                                color: Color.fromARGB(255, 1, 98, 63)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 9,
                           ),
                           InkWell(
@@ -192,7 +193,7 @@ class _daylyTicket extends State<daylyTicket> {
                                 _quantity2--;
                               });
                             },
-                            child: Container(
+                            child: const SizedBox(
                                 height: 24,
                                 width: 24,
                                 child: Image(image: appimages.searchzoomout)),
@@ -204,7 +205,7 @@ class _daylyTicket extends State<daylyTicket> {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         Container(
@@ -217,7 +218,7 @@ class _daylyTicket extends State<daylyTicket> {
             lastDay: DateTime.utc(2030, 3, 14),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Container(
@@ -227,22 +228,22 @@ class _daylyTicket extends State<daylyTicket> {
             borderRadius: BorderRadius.circular(20),
             color: const Color.fromARGB(255, 245, 245, 245),
           ),
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 12, left: 19),
+                padding: EdgeInsets.only(top: 12, left: 19),
                 child: Text(
                   'Ваш заказ:',
                   style: TextStyle(
                       fontSize: 12,
                       fontFamily: 'museo300',
-                      color: const Color.fromARGB(255, 72, 72, 72)),
+                      color: Color.fromARGB(255, 72, 72, 72)),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 2, left: 22),
+                padding: EdgeInsets.only(top: 2, left: 22),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -257,13 +258,13 @@ class _daylyTicket extends State<daylyTicket> {
                       width: 15,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 19),
+                      padding: EdgeInsets.only(right: 19),
                       child: Text(
                         '600 р ',
                         style: TextStyle(
                             fontSize: 16,
                             fontFamily: 'museo700',
-                            color: const Color.fromARGB(255, 220, 121, 1)),
+                            color: Color.fromARGB(255, 220, 121, 1)),
                       ),
                     )
                   ],

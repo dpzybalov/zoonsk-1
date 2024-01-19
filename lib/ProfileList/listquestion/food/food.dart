@@ -15,7 +15,7 @@ class _foodlist extends State<foodlist> {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: ListView(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           SafeArea(
             child: Padding(
@@ -29,9 +29,9 @@ class _foodlist extends State<foodlist> {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Image(image: appimages.arrowcircleleft),
+                        child: const Image(image: appimages.arrowcircleleft),
                       ),
-                      Text(
+                      const Text(
                         'Заказать еду',
                         style: TextStyle(
                             fontSize: 40,
@@ -40,16 +40,16 @@ class _foodlist extends State<foodlist> {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   TextField(
                     decoration: InputDecoration(
                       isCollapsed: true,
-                      contentPadding: EdgeInsets.fromLTRB(16, 13, 0, 13),
-                      suffixIcon: Icon(Icons.search),
+                      contentPadding: const EdgeInsets.fromLTRB(16, 13, 0, 13),
+                      suffixIcon: const Icon(Icons.search),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Color.fromARGB(255, 197, 198, 204),
                           width: 1,
                         ),
@@ -58,7 +58,7 @@ class _foodlist extends State<foodlist> {
                       hintText: 'Найти заведение',
                     ),
                   ),
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -74,15 +74,15 @@ class _foodlist extends State<foodlist> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
+                              const SizedBox(
                                   height: 34,
                                   width: 34,
                                   child: Image(image: appimages.coffe)),
-                              SizedBox(
+                              const SizedBox(
                                 height: 9,
                               ),
                               Container(
-                                child: Text(
+                                child: const Text(
                                   'Чашка \nкофе',
                                   style: TextStyle(
                                       fontSize: 14,
@@ -106,15 +106,15 @@ class _foodlist extends State<foodlist> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
+                              const SizedBox(
                                   height: 34,
                                   width: 34,
                                   child: Image(image: appimages.coffe)),
-                              SizedBox(
+                              const SizedBox(
                                 height: 9,
                               ),
                               Container(
-                                child: Text(
+                                child: const Text(
                                   'Чашка \nкофе',
                                   style: TextStyle(
                                       fontSize: 14,
@@ -138,15 +138,15 @@ class _foodlist extends State<foodlist> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
+                              const SizedBox(
                                   height: 34,
                                   width: 34,
                                   child: Image(image: appimages.coffe)),
-                              SizedBox(
+                              const SizedBox(
                                 height: 9,
                               ),
                               Container(
-                                child: Text(
+                                child: const Text(
                                   'Чашка \nкофе',
                                   style: TextStyle(
                                       fontSize: 14,
@@ -160,7 +160,7 @@ class _foodlist extends State<foodlist> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Row(
@@ -178,15 +178,15 @@ class _foodlist extends State<foodlist> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
+                              const SizedBox(
                                   height: 34,
                                   width: 34,
                                   child: Image(image: appimages.coffe)),
-                              SizedBox(
+                              const SizedBox(
                                 height: 9,
                               ),
                               Container(
-                                child: Text(
+                                child: const Text(
                                   'Чашка \nкофе',
                                   style: TextStyle(
                                       fontSize: 14,
@@ -210,15 +210,15 @@ class _foodlist extends State<foodlist> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
+                              const SizedBox(
                                   height: 34,
                                   width: 34,
                                   child: Image(image: appimages.coffe)),
-                              SizedBox(
+                              const SizedBox(
                                 height: 9,
                               ),
                               Container(
-                                child: Text(
+                                child: const Text(
                                   'Чашка \nкофе',
                                   style: TextStyle(
                                       fontSize: 14,
@@ -239,10 +239,10 @@ class _foodlist extends State<foodlist> {
                             borderRadius: BorderRadius.circular(15),
                             color: const Color.fromARGB(255, 1, 98, 63),
                           ),
-                          child: Column(
+                          child: const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
+                              SizedBox(
                                   height: 34,
                                   width: 34,
                                   child:
@@ -250,7 +250,7 @@ class _foodlist extends State<foodlist> {
                               SizedBox(
                                 height: 9,
                               ),
-                              Container(
+                              SizedBox(
                                 width: 70,
                                 child: Text(
                                   'Смотреть  все',

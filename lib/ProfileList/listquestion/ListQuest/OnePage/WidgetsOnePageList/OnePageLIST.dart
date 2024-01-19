@@ -40,7 +40,7 @@ class _QuestList extends State<QuestList> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Image(image: appimages.arrowcircleleft),
+                    child: const Image(image: appimages.arrowcircleleft),
                   ),
                   const Text(
                     'Задания',

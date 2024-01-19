@@ -22,13 +22,13 @@ class spisokReprilii extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: Color.fromARGB(255, 245, 245, 245),
+                color: const Color.fromARGB(255, 245, 245, 245),
               ),
-              child: Row(
+              child: const Row(
                 children: [
                   Padding(
                     padding: EdgeInsets.fromLTRB(3, 3, 0, 3),
-                    child: Container(
+                    child: SizedBox(
                         height: 85,
                         width: 92,
                         child: Image(image: appimages.Rectangle4)),
@@ -36,13 +36,13 @@ class spisokReprilii extends StatelessWidget {
                   SizedBox(
                     width: 22,
                   ),
-                  Container(
+                  SizedBox(
                     width: 165,
                     height: 91,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
+                        SizedBox(
                           width: 165,
                           height: 69,
                           child: Column(
@@ -62,7 +62,7 @@ class spisokReprilii extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: 165,
                           height: 22,
                           child: Text('Расстояние',
@@ -75,7 +75,7 @@ class spisokReprilii extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                         height: 24,
                         width: 24,
                         child: Image(image: appimages.arrow)),
