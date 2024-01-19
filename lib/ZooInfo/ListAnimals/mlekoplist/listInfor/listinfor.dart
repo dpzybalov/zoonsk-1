@@ -63,12 +63,16 @@ class _listinfor extends State<listinfor> {
                         children: [
                           InkWell(
                             child: Container(
-                                width: 10,
-                                height: 10,
-                                child: Image(image: appimages.arrowcircleleft)),
+                                width: 50,
+                                height: 50,
+                                child: const Padding(
+                                  padding: EdgeInsets.only(
+                                      top: 12, right: 20, bottom: 12),
+                                  child:
+                                      Image(image: appimages.arrowcircleleft),
+                                )),
                             onTap: () {
-                              setState(() {});
-                              Navigator.pop(context, true);
+                              Navigator.pop(context);
                             },
                           ),
                           const Text(

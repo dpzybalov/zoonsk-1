@@ -26,14 +26,16 @@ class _AnimalList extends State<ListAnimals> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    child: SizedBox(
-                      height: 40,
-                      width: 40,
-                      child: Container(
-                          width: 36,
-                          height: 36,
-                          child: const Image(image: appimages.arrowcircleleft)),
-                    ),
+                    splashFactory: NoSplash.splashFactory,
+                    highlightColor: Colors.transparent,
+                    child: Container(
+                        width: 50,
+                        height: 50,
+                        child: const Padding(
+                          padding:
+                              EdgeInsets.only(top: 12, right: 20, bottom: 12),
+                          child: Image(image: appimages.arrowcircleleft),
+                        )),
                     onTap: () {
                       Navigator.pop(context);
                     },

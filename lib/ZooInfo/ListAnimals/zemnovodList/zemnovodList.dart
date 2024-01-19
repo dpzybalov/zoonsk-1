@@ -1,4 +1,3 @@
-
 import 'package:zoonsk/ZooInfo/ListAnimals/zemnovodList/spisokZemnovod.dart';
 
 import 'package:zoonsk/image/image.dart';
@@ -12,8 +11,6 @@ class zemnovodList extends StatefulWidget {
 }
 
 class _zemnovodList extends State<zemnovodList> {
-
-   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +25,14 @@ class _zemnovodList extends State<zemnovodList> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
-                    child: const Image(image: appimages.arrowcircleleft),
+                    child: Container(
+                        width: 50,
+                        height: 50,
+                        child: const Padding(
+                          padding:
+                              EdgeInsets.only(top: 12, right: 20, bottom: 12),
+                          child: Image(image: appimages.arrowcircleleft),
+                        )),
                     onTap: () {
                       Navigator.pop(context);
                     },
